@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartCampus AI — Smart College Management, Verified by AI</title>
+<meta name="description" content="SmartCampus AI: a multi-module college management platform with AI-powered handwriting verification, student/staff/institution portals, and integrated coding & typing workspaces.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/landing.css">
+</head>
+<body>
+
+<div class="bg-grain" aria-hidden="true"></div>
+<div class="mouse-glow" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- ============================= NAVBAR ============================= -->
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <svg class="brand-seal" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="22" stroke="#e3a53d" stroke-width="1.5"/>
+        <path d="M15 24.5l6 6 12-13" stroke="#5cd6a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>SmartCampus AI<small>College Management System</small></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="../HTML/about.html">About</a>
+      <a href="#features">Features</a>
+      <a href="#technology">Technology</a>
+      <a href="#team">Team</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#portals">Portals</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="#portals" class="btn btn-ghost">Portals</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================= HERO ============================= -->
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Smart College Management System</span>
+      <h1>Every submission,<br>
+        <span class="typed" data-words='["verified by AI.","signed by trust.","checked in seconds."]'></span>
+      </h1>
+      <p class="hero-desc">
+        SmartCampus AI brings Student, Staff, and Institution workflows into one platform —
+        assignments, coding and typing workspaces, document handling, and a handwriting verification
+        engine that reads and confirms authorship the way a professor would, at machine speed.
+      </p>
+      <div class="hero-actions">
+        <a href="#portals" class="btn btn-primary btn-shine">Enter a Portal</a>
+        <a href="#about" class="btn btn-ghost">See how it works</a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num" data-target="4"><span class="num">0</span></div>
+          <div class="stat-label">Modules</div>
+        </div>
+        <div>
+          <div class="stat-num" data-target="12" data-suffix="+"><span class="num">0</span><span class="suffix"></span></div>
+          <div class="stat-label">Technologies</div>
+        </div>
+        <div>
+          <div class="stat-num" data-target="6"><span class="num">0</span></div>
+          <div class="stat-label">AI Features</div>
+        </div>
+        <div>
+          <div class="stat-num" data-target="100" data-suffix="%"><span class="num">0</span><span class="suffix"></span></div>
+          <div class="stat-label">Active Dev</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="seal-ring"></div>
+      <div class="seal-card">
+        <svg class="seal-svg" viewBox="0 0 200 200">
+          <circle class="stroke" cx="100" cy="100" r="80"/>
+          <path class="check" d="M62 104l24 24 52-56"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span>SCROLL</span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+<!-- ============================= ABOUT ============================= -->
+<section id="about" class="about">
+  <div class="container about-grid">
+    <div class="reveal">
+      <div class="ledger-line"><span>Status</span><span>Active development</span></div>
+      <div class="ledger-line"><span>Architecture</span><span>Multi-module</span></div>
+      <div class="ledger-line"><span>Core Engine</span><span>AI Verification</span></div>
+      <div class="ledger-line"><span>Portals</span><span>Student · Staff · Institution</span></div>
+      <span class="status-pill"><span class="pulse"></span>Currently in active development</span>
+    </div>
+
+    <div class="about-copy reveal">
+      <span class="eyebrow">About the project</span>
+      <h2>A campus system built<br>around one hard problem.</h2>
+      <p>
+        <strong>SmartCampus AI</strong> is a smart college management platform designed to bring
+        assignment submission, verification, and administration onto one connected system. Rather
+        than treating handwriting verification as an afterthought, it's the core engine the rest of
+        the platform is built around.
+      </p>
+      <p>
+        The system is organized into a <strong>multi-module architecture</strong> — separate portals
+        for students, staff, and institutions — each talking to a shared backend and a common AI
+        verification pipeline, so a document submitted once can be checked, scored, and routed
+        without manual re-entry.
+      </p>
+      <p>
+        This is an actively developed project. Current work covers the four core portals and the
+        handwriting verification module; the roadmap below tracks what's shipped and what's next.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FEATURES ============================= -->
+<section id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">What's inside</span>
+      <h2>One system, every workflow a campus needs.</h2>
+      <p>From submitting an assignment to verifying who wrote it, each module is built to work on its own and together.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">🎓</div>
+        <h3>Student Portal</h3>
+        <p>Submit assignments, manage documents, and track verification status in one dashboard.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🧑‍🏫</div>
+        <h3>Staff Portal</h3>
+        <p>Create assignments, review AI verification reports, and generate performance analytics.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🏛️</div>
+        <h3>Institution Portal</h3>
+        <p>Administer students and staff across departments with centralized reporting.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">✒️</div>
+        <h3>AI Handwriting Verification</h3>
+        <p>Compares handwriting against a reference sample to confirm authorship automatically.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">📋</div>
+        <h3>Assignment Management</h3>
+        <p>Create, distribute, collect, and grade assignments without leaving the platform.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">💻</div>
+        <h3>Coding Workspace</h3>
+        <p>An in-browser workspace for students to write, run, and submit code assignments.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">⌨️</div>
+        <h3>Typing Workspace</h3>
+        <p>A focused writing environment for typed submissions with built-in formatting.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🗂️</div>
+        <h3>Document Management</h3>
+        <p>Central storage for reference samples, submissions, and generated AI reports.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= AI WORKFLOW ============================= -->
+<section id="ai-workflow" class="workflow">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">How verification works</span>
+      <h2>From reference sample to staff dashboard.</h2>
+      <p>A simplified view of the pipeline that turns a scanned document into a verified, reportable result.</p>
+    </div>
+
+    <div class="workflow-chain">
+      <div class="workflow-step reveal">
+        <div class="step-node">1</div>
+        <div class="step-body">
+          <h4>Reference PDF</h4>
+          <p>A known handwriting sample is uploaded to establish the writer's baseline.</p>
+        </div>
+      </div>
+      <div class="workflow-step reveal">
+        <div class="step-node">2</div>
+        <div class="step-body">
+          <h4>Image Processing</h4>
+          <p>Scanned pages are cleaned, deskewed, and prepared for analysis.</p>
+        </div>
+      </div>
+      <div class="workflow-step reveal">
+        <div class="step-node">3</div>
+        <div class="step-body">
+          <h4>Handwriting Detection</h4>
+          <p>Handwritten regions are located and separated from printed content.</p>
+        </div>
+      </div>
+      <div class="workflow-step reveal">
+        <div class="step-node">4</div>
+        <div class="step-body">
+          <h4>Feature Extraction</h4>
+          <p>Stroke shape, spacing, and pressure patterns are converted into measurable features.</p>
+        </div>
+      </div>
+      <div class="workflow-step reveal">
+        <div class="step-node">5</div>
+        <div class="step-body">
+          <h4>Writer Profile</h4>
+          <p>Extracted features are compiled into a profile unique to the reference sample.</p>
+        </div>
+      </div>
+      <div class="workflow-step reveal">
+        <div class="step-node">6</div>
+        <div class="step-body">
+          <h4>Verification</h4>
+          <p>The submission is compared against the writer profile to confirm or flag authorship.</p>
+        </div>
+      </div>
+      <div class="workflow-step reveal">
+        <div class="step-node">7</div>
+        <div class="step-body">
+          <h4>AI Report</h4>
+          <p>Results are compiled into a readable report with a confidence score.</p>
+        </div>
+      </div>
+      <div class="workflow-step reveal">
+        <div class="step-node">✓</div>
+        <div class="step-body">
+          <h4>Staff Dashboard</h4>
+          <p>The finished report lands in the staff portal for review and action.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= TECHNOLOGY ============================= -->
+<section id="technology">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Under the hood</span>
+      <h2>Built with a practical, learning-forward stack.</h2>
+      <p>A working set of tools today, with a clear list of what's being learned for what's next.</p>
+    </div>
+
+    <div class="tech-groups">
+      <div class="tech-group reveal">
+        <h4>Frontend</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">HTML5</span>
+          <span class="tech-tag">CSS3</span>
+          <span class="tech-tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="tech-group reveal">
+        <h4>Backend</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Flask</span>
+        </div>
+      </div>
+      <div class="tech-group reveal">
+        <h4>Database</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">MongoDB</span>
+        </div>
+      </div>
+      <div class="tech-group reveal">
+        <h4>AI</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">OpenCV</span>
+          <span class="tech-tag">ConvNeXt</span>
+          <span class="tech-tag">NumPy</span>
+        </div>
+      </div>
+      <div class="tech-group planned reveal">
+        <h4>DevOps — learning / planned</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Docker Compose</span>
+          <span class="tech-tag">Git</span>
+          <span class="tech-tag">GitHub</span>
+          <span class="tech-tag">Linux</span>
+          <span class="tech-tag">AWS</span>
+        </div>
+      </div>
+      <div class="tech-group reveal">
+        <h4>AI Assistance</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">ChatGPT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">The people building it</span>
+      <h2>Team</h2>
+      <p>A small team working across frontend, backend, and AI.</p>
+    </div>
+
+    <div class="team-lead reveal">
+      <div class="img">
+        <img src="../../hh1.png" alt="Hariharan J T">
+      </div>
+      <div>
+        <h3>Hariharan J T</h3>
+        <span class="role-tag">Team Lead</span>
+        <p>Leads the SmartCampus AI project, overseeing architecture decisions across the portals and the AI verification module.</p>
+        <a class="portfolio-link" href="https://hariharancricket1817-spec.github.io/Hariharan-portfolio/" target="_blank" rel="noopener noreferrer" aria-label="Visit Hariharan J T's portfolio">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+          View Portfolio
+        </a>
+      </div>
+    </div>
+
+    <div class="team-grid">
+      <!-- TODO: replace href="#" with Sanjay S's portfolio link when available -->
+      <a class="team-card reveal" href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit Sanjay S's portfolio">
+        <div class="avatar">SS</div>
+        <h4>Sanjay S</h4>
+        <span class="role-tag">Team Member</span>
+        <p>Contributing to the SmartCampus AI platform.</p>
+        <span class="portfolio-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+          View Portfolio
+        </span>
+      </a>
+      <!-- TODO: replace href="#" with Harikrishnan K's portfolio link when available -->
+      <a class="team-card reveal" href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit Harikrishnan K's portfolio">
+        <div class="avatar">HK</div>
+        <h4>Harikrishnan K</h4>
+        <span class="role-tag">Team Member</span>
+        <p>Contributing to the SmartCampus AI platform.</p>
+        <span class="portfolio-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+          View Portfolio
+        </span>
+      </a>
+      <!-- TODO: replace href="#" with Naviin G K's portfolio link when available -->
+      <a class="team-card reveal" href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit Naviin G K's portfolio">
+        <div class="avatar">NG</div>
+        <h4>Naviin G K</h4>
+        <span class="role-tag">Team Member</span>
+        <p>Contributing to the SmartCampus AI platform.</p>
+        <span class="portfolio-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+          View Portfolio
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- ============================= ROADMAP ============================= -->
+<section id="roadmap" class="roadmap">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Where things stand</span>
+      <h2>Project roadmap</h2>
+      <p>What's live today, and what the team is building toward next.</p>
+    </div>
+
+    <div class="roadmap-cols">
+      <div class="roadmap-col current reveal">
+        <h4>✓ Current</h4>
+        <div class="roadmap-item"><span class="tick">✓</span>Smart College System core</div>
+        <div class="roadmap-item"><span class="tick">✓</span>Student Portal</div>
+        <div class="roadmap-item"><span class="tick">✓</span>Staff Portal</div>
+        <div class="roadmap-item"><span class="tick">✓</span>Institution Portal</div>
+        <div class="roadmap-item"><span class="tick">✓</span>AI Handwriting Verification</div>
+      </div>
+      <div class="roadmap-col upcoming reveal">
+        <h4>→ Upcoming</h4>
+        <div class="roadmap-item"><span class="tick">→</span>AI model improvement</div>
+        <div class="roadmap-item"><span class="tick">→</span>Cloud deployment</div>
+        <div class="roadmap-item"><span class="tick">→</span>Docker deployment</div>
+        <div class="roadmap-item"><span class="tick">→</span>Analytics dashboard</div>
+        <div class="roadmap-item"><span class="tick">→</span>Mobile support</div>
+        <div class="roadmap-item"><span class="tick">→</span>Advanced AI features</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= PORTALS ============================= -->
+<section id="portals">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Get started</span>
+      <h2>Choose your portal</h2>
+      <p>Each portal connects to the same backend and AI verification engine, tailored to what you need to do.</p>
+    </div>
+
+    <div class="portals-grid">
+      <div class="portal-card reveal">
+        <span class="role">For students</span>
+        <h3>Student Portal</h3>
+        <ul>
+          <li>Assignment submission</li>
+          <li>Document management</li>
+          <li>Typing workspace</li>
+          <li>Coding workspace</li>
+          <li>Profile</li>
+        </ul>
+      <button class="btn btn-primary" data-redirect="student">
+    Student Portal
+</button>
+      </div>
+      <div class="portal-card reveal">
+        <span class="role">For staff</span>
+        <h3>Staff Portal</h3>
+        <ul>
+          <li>Assignment creation</li>
+          <li>Verification review</li>
+          <li>Reports</li>
+          <li>Analytics</li>
+        </ul>
+       <button class="btn btn-primary" data-redirect="staff">
+    Staff Portal
+</button>
+      </div>
+      <div class="portal-card reveal">
+        <span class="role">For institutions</span>
+        <h3>Institution Portal</h3>
+        <ul>
+          <li>Overall administration</li>
+          <li>Student management</li>
+          <li>Staff management</li>
+          <li>Reports</li>
+        </ul>
+        <button class="btn btn-primary" data-redirect="institution">
+    Institution Portal
+</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CONTACT ============================= -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Reach the team</span>
+      <h2>Contact</h2>
+      <p>Questions, collaboration, or feedback on SmartCampus AI — reach out through any of these.</p>
+    </div>
+
+    <div class="contact-grid">
+      <a href="mailto:contact@smartcampus.ai" class="contact-card reveal">
+        <div class="ico">✉️</div>
+        Project Email
+        <span>contact@smartcampus.ai</span>
+      </a>
+      <a href="#" class="contact-card reveal">
+        <div class="ico">🐙</div>
+        GitHub
+        <span>/smartcampus-ai</span>
+      </a>
+      <a href="#" class="contact-card reveal">
+        <div class="ico">💼</div>
+        LinkedIn
+        <span>SmartCampus AI</span>
+      </a>
+      <a href="#" class="contact-card reveal">
+        <div class="ico">🌐</div>
+        Portfolio
+        <span>View work</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FOOTER ============================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <svg class="brand-seal" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="22" stroke="#e3a53d" stroke-width="1.5"/>
+            <path d="M15 24.5l6 6 12-13" stroke="#5cd6a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>SmartCampus AI</span>
+        </div>
+        <p>A smart college management system with AI-powered handwriting verification at its core.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#technology">Technology</a>
+        <a href="#roadmap">Roadmap</a>
+      </div>
+      <div class="footer-col">
+        <h5>Portals</h5>
+        <a href="student_login.html">Student</a>
+        <a href="staff_login.html">Staff</a>
+        <a href="institution_login.html">Institution</a>
+      </div>
+      <div class="footer-col">
+        <h5>Status</h5>
+        <p>Active development</p>
+        <p>Future: dark mode, AI chatbot, live stats</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 SmartCampus AI. All rights reserved.</span>
+      <span class="version-tag">v0.1.0 — active development</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">↑</button>
+
+<script src="../JAVASCRIPT/landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staff Dashboard — SmartCampus AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/staff_dashboard.css">
+</head>
+<body>
+
+<div class="bg-grain" aria-hidden="true"></div>
+
+<div class="dashboard">
+
+  <!-- ============================= SIDEBAR ============================= -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <div class="brand">
+        <svg class="brand-seal" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="22" stroke="#e3a53d" stroke-width="1.5"/>
+          <path d="M15 24.5l6 6 12-13" stroke="#5cd6a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div>
+          <span class="brand-name">SmartCampus AI</span>
+          <span class="brand-sub">Staff Panel</span>
+        </div>
+      </div>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+    </div>
+
+    <nav class="nav-group">
+      <span class="nav-label">Menu</span>
+      <ul class="nav-list" id="navList">
+        <li class="nav-item active" data-section="class" onclick="setActiveNav(this); loadSection('class')">
+          <span class="nav-ico">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg>
+          </span>
+          <span>My Classes</span>
+        </li>
+        <li class="nav-item" data-section="assignments" onclick="setActiveNav(this); loadSection('assignments')">
+          <span class="nav-ico">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6a1 1 0 0 1 1 1v2H8V3a1 1 0 0 1 1-1z"/><rect x="4" y="4" width="16" height="18" rx="2"/><path d="M8 11h8M8 15h8M8 19h5"/></svg>
+          </span>
+          <span>Assignments</span>
+        </li>
+        <li class="nav-item" data-section="verify" onclick="setActiveNav(this); loadSection('verify')">
+          <span class="nav-ico">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>
+          </span>
+          <span>Verify Submissions</span>
+        </li>
+        <li class="nav-item" data-section="analytics" onclick="setActiveNav(this); loadSection('analytics')">
+          <span class="nav-ico">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M12 20V4M20 20v-7"/></svg>
+          </span>
+          <span>Analytics</span>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="verify-pill">
+        <span class="pulse"></span>
+        AI Verification Active
+      </div>
+      <button class="nav-item logout" onclick="logout()">
+        <span class="nav-ico">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        </span>
+        <span>Logout</span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ============================= MAIN ============================= -->
+  <div class="main">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <div class="topbar-search">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search classes, assignments...">
+      </div>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span class="badge-dot"></span>
+        </button>
+        <div class="user-chip">
+          <div class="user-avatar">ST</div>
+          <div class="user-meta">
+            <span class="user-name">Staff</span>
+            <span class="user-role">Faculty</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dynamic content target — DO NOT rename id="content", loadSection()/viewClass()/
+         assignToClass() all target this element directly via innerHTML. -->
+    <div class="main-content" id="content">
+      <div class="welcome-row">
+        <span class="eyebrow">Overview</span>
+        <h1>Welcome Staff 👩‍🏫</h1>
+        <p class="welcome-sub">Manage your classes, assignments, and AI verification reports from here.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="../JAVASCRIPT/staff_dashboard.js"></script>
+<script src="../JAVASCRIPT/chart.js"></script>
+<script>
+  // New UI-only helpers for the redesign — do not affect loadSection(),
+  // viewClass(), assignToClass(), submitAssignment(), or logout().
+  function setActiveNav(el){
+    if (!el) return;
+    document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+    el.classList.add('active');
+  }
+
+  const sidebar = document.getElementById('sidebar');
+  const sidebarOverlay = document.getElementById('sidebarOverlay');
+  const menuBtn = document.getElementById('menuBtn');
+  const sidebarClose = document.getElementById('sidebarClose');
+
+  function openSidebar(){
+    sidebar.classList.add('open');
+    sidebarOverlay.classList.add('show');
+  }
+  function closeSidebar(){
+    sidebar.classList.remove('open');
+    sidebarOverlay.classList.remove('show');
+  }
+
+  if (menuBtn) menuBtn.addEventListener('click', openSidebar);
+  if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+  if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
+</script>
+</body>
+</html>

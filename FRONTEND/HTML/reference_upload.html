@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload Reference Handwriting</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+
+            background: #f4f6f8;
+        }
+
+        .container {
+            width: 550px;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 14px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        label {
+            display: block;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+
+            padding: 13px;
+
+            margin-bottom: 20px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 6px;
+
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 6px;
+
+            background: #1687e5;
+
+            color: white;
+
+            font-size: 16px;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0f73c7;
+        }
+
+        button:disabled {
+            background: #999;
+            cursor: not-allowed;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Upload Reference Handwriting</h1>
+
+        <label for="student_id">
+            Student ID
+        </label>
+
+        <input
+            type="text"
+            id="student_id"
+            value="23ucs014"
+        >
+
+        <label for="student_name">
+            Student Name
+        </label>
+
+        <input
+            type="text"
+            id="student_name"
+            value="Hariharan"
+        >
+
+        <label for="reference_pdf">
+            Reference PDF
+        </label>
+
+        <input
+            type="file"
+            id="reference_pdf"
+            accept=".pdf,application/pdf"
+        >
+
+        <button id="uploadReferenceBtn">
+            Upload Reference PDF
+        </button>
+
+    </div>
+
+    <script src="../JAVASCRIPT/reference_upload.js"></script>
+
+</body>
+
+</html>
