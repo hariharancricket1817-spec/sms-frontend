@@ -193,15 +193,15 @@ document.querySelectorAll('[data-redirect]').forEach(btn => {
         switch (target) {
 
             case "student":
-                window.location.href = "../HTML/student_loginnew.html";
+              window.location.href = "FRONTEND/HTML/student_loginnew.html";
                 break;
 
             case "staff":
-                window.location.href = "../HTML/staff_loginnew.html";
+              window.location.href = "FRONTEND/HTML/staff_loginnew.html";
                 break;
 
             case "institution":
-                window.location.href = "../HTML/institution_loginnew.html";
+              window.location.href = "FRONTEND/HTML/institution_loginnew.html";
                 break;
 
             default:
