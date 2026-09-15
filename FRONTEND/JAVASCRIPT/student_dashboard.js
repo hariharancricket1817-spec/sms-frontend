@@ -156,6 +156,8 @@ else if(type==="handwritten"){
 
 }
 
+}
+
 ///////////////////////////////////////////////////////////
 // ✅ MANUAL IDE OPEN
 ///////////////////////////////////////////////////////////
@@ -288,9 +290,9 @@ async function uploadAssignment(assignmentId) {
 
 function logout() {
 
-    window.location.href = "mainpage.html";
+    window.location.href = "../../index.html";
 
-}}
+}
 // =====================================================================
 // END OF USER'S ORIGINAL SCRIPT — NOTHING ABOVE THIS LINE WAS CHANGED.
 // =====================================================================

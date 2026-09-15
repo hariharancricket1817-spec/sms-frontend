@@ -38,7 +38,7 @@ function toggleTheme() {
 
 // LOGOUT
 function logout() {
-    window.location.href = "mainpage.html";
+    window.location.href = "../../index.html";
 }
 function link0(){
     window.location.href = "student_management.html";

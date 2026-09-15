@@ -318,6 +318,6 @@ window.submitAssignment = function (className) {
 // ================= LOGOUT =================
 window.logout = function () {
 
-    window.location.href = "mainpage.html";
+    window.location.href = "../../index.html";
 
 };
